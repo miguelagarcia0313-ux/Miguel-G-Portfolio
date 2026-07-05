@@ -1,0 +1,231 @@
+/* ===========================================================
+   PROJECT DETAIL PAGE
+   Extends styles.css — same tokens (:root vars), same fonts.
+   Include AFTER styles.css on every project page.
+=========================================================== */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 32px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--cyan);
+  transform: translateX(-3px);
+}
+
+/* ---- Two-up cornered box (same DNA as .project-card) ---- */
+.project-detail {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 0;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.project-detail__info { order: 1; }
+.project-detail__slideshow { order: 2; }
+
+/* ---- RIGHT: Slideshow ---- */
+.project-detail__slideshow {
+  position: relative;
+  background: var(--bg-panel-2);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-left: 1px solid var(--border);
+}
+
+.slideshow__track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.slideshow__slide {
+  flex: 0 0 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slideshow__slide img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Arrows — off-white, sit on top of the image */
+.slideshow__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(238, 241, 247, 0.35);
+  background: rgba(5, 6, 10, 0.35);
+  backdrop-filter: blur(6px);
+  color: #f4f2ec; /* off-white */
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  z-index: 2;
+}
+
+.slideshow__arrow:hover {
+  background: rgba(5, 6, 10, 0.6);
+  border-color: rgba(238, 241, 247, 0.7);
+}
+
+.slideshow__arrow--left {
+  left: 16px;
+  transform: translateY(-50%) translateX(0);
+}
+.slideshow__arrow--left:hover { transform: translateY(-50%) translateX(-2px); }
+
+.slideshow__arrow--right { right: 16px; }
+.slideshow__arrow--right:hover { transform: translateY(-50%) translateX(2px); }
+
+/* Bubble/dot indicators, below the arrows */
+.slideshow__dots {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  z-index: 2;
+}
+
+.slideshow__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(238, 241, 247, 0.5);
+  background: rgba(238, 241, 247, 0.25);
+  transition: background 0.2s ease, transform 0.2s ease, width 0.2s ease;
+  padding: 0;
+}
+
+.slideshow__dot:hover {
+  background: rgba(238, 241, 247, 0.55);
+}
+
+.slideshow__dot.is-active {
+  background: #f4f2ec;
+  width: 22px;
+  border-radius: 5px;
+}
+
+/* ---- RIGHT: Details ---- */
+.project-detail__info {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-detail__info .eyebrow { margin-bottom: 10px; }
+
+.project-detail__info h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.project-detail__desc {
+  color: var(--muted);
+  font-size: 0.98rem;
+  margin-bottom: 20px;
+}
+
+.project-detail__desc + .project-detail__desc {
+  margin-top: -12px;
+}
+
+.project-detail__info .tag-row {
+  margin-bottom: 28px;
+}
+
+.project-detail__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.project-detail__links .btn svg {
+  margin-right: 8px;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+  .project-detail {
+    grid-template-columns: 1fr;
+  }
+
+  /* Slideshow leads on mobile, details follow */
+  .project-detail__slideshow {
+    order: 1;
+    aspect-ratio: 4 / 3;
+    border-left: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .project-detail__info {
+    order: 2;
+    padding: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-detail__slideshow {
+    aspect-ratio: 1 / 1;
+  }
+
+  .project-detail__info {
+    padding: 24px 20px;
+  }
+
+  /* Slightly smaller, easier-to-tap arrows on narrow screens */
+  .slideshow__arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+
+  .slideshow__arrow--left { left: 10px; }
+  .slideshow__arrow--right { right: 10px; }
+
+  .slideshow__dots { bottom: 12px; gap: 7px; }
+
+  .project-detail__links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-detail__links .btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slideshow__track { transition: none; }
+}

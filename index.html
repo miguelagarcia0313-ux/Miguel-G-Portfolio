@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miguel Garcia — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/Assets/css/styles.css">
+</head>
+<body>
+
+<!-- Moving background glow, sits behind everything -->
+<div class="aurora" aria-hidden="true">
+  <span class="aurora__blob aurora__blob--one"></span>
+  <span class="aurora__blob aurora__blob--two"></span>
+  <span class="aurora__blob aurora__blob--three"></span>
+</div>
+
+<!-- Top bar -->
+<header class="navbar">
+  <a href="#home" class="navbar__brand">Miguel<span>Garcia</span></a>
+
+  <nav class="navbar__nav" id="primaryNav">
+    <a href="#home" class="nav-link active">Home</a>
+    <a href="#resume" class="nav-link">Resume</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#contact" class="nav-link">Contact Me</a>
+  </nav>
+
+  <button class="navbar__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section id="home" class="section hero">
+    <p class="eyebrow">Hello, I'm</p>
+    <h1 class="hero__title">Miguel Garcia</h1>
+    <p class="hero__subtitle">Software Developer crafting clean, purposeful interfaces and reliable back-end systems.</p>
+    <div class="hero__actions">
+      <a href="#projects" class="btn btn--primary">View Projects</a>
+      <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+    </div>
+    <a href="#resume" class="scroll-cue" aria-label="Scroll to Resume">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume" class="section">
+    <div class="section__head">
+      <p class="eyebrow">Background</p>
+      <h2>Resume</h2>
+    </div>
+
+    <div class="resume__intro">
+      <p>I'm someone who likes figuring out how to make things work better. I've automated office workflows with Microsoft Power Automate, handled IT support and basic web development, and worked as a simulation technician solving problems as they came up. Whether it's streamlining a process or building something from scratch, I focus on finding practical solutions.</p>
+      <a href="Assets/files/Miguel-Garcia-Resume.pdf" class="btn btn--primary" download>Download Résumé (PDF)</a>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline__col">
+        <h3 class="timeline__label">Experience</h3>
+
+        <div class="timeline__item">
+          <span class="timeline__date">September 2024 — May 2026</span>
+          <h4>Simulation Technician WS</h4>
+          <p class="timeline__org">UTRGV School of Nursing</p>
+          <p>Managed and maintained patient simulation equipment, diagnosing malfunctions and coordinating with manufacturers on repairs and parts. Ran simulation sessions and lab operations while handling department administrative duties, inventory management, and after-hours lab coverage. Also contributed to planning for a full lab remodel and supported large-scale department events.</p>
+        </div>
+
+        <div class="timeline__item">
+          <span class="timeline__date">September 2022 — September 2024</span>
+          <h4>Web Development Assistant WS</h4>
+          <p class="timeline__org">UTRGV School of Nursing</p>
+          <p>Diagnosed and resolved hardware/software issues for department staff while managing and updating the department website. Built Power Automate workflows to automate repetitive office tasks and reduce manual workload, and managed device and supply inventory for the office.</p>
+        </div>
+      </div>
+
+      <div class="timeline__col">
+        <h3 class="timeline__label">Education</h3>
+
+        <div class="timeline__item">
+          <span class="timeline__date">2018 — 2022</span>
+          <h4>Highschool Degree</h4>
+          <p class="timeline__org">Sharyland Advanced Academic Academy</p>
+          <p>Completed an accelerated course load through Early College High School, earning college credit while pursuing dual enrollment coursework alongside standard graduation requirements. Served as senior coder and lead builder on a robotics team competing at the regional level, managing team responsibilities while developing hands-on engineering and programming skills; also competed at the national level in chess. Graduated in the top 5% of a class of roughly 600 students.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="section__head">
+      <p class="eyebrow">Toolbox</p>
+      <h2>Skills</h2>
+    </div>
+
+    <div class="skills__grid">
+      <div class="skill-card">
+        <h3>Office</h3>
+        <div class="tag-row">
+          <span class="tag">Microsoft Office 365</span>
+          <span class="tag">Google Workspace</span>
+          <span class="tag">File Management</span>
+          <span class="tag">Call Management</span>
+          <span class="tag">Project Management</span>
+          <span class="tag">Communication</span>
+          <span class="tag">Problem Solving</span>
+          <span class="tag">Time Management</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Engineering & Design</h3>
+        <div class="tag-row">
+          <span class="tag">AutoCAD</span>
+          <span class="tag">SolidWorks</span>
+          <span class="tag">Fusion 360</span>
+          <span class="tag">Revit</span>
+          <span class="tag">SketchUp</span>
+          <span class="tag">3D Modeling</span>
+          <span class="tag">2D Drafting</span>
+          <span class="tag">Simulation</span>
+          <span class="tag">Analysis</span>
+          <span class="tag">Design</span>
+
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Programming Languages</h3>
+        <div class="tag-row">
+          <span class="tag">Web Development</span>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Python</span>
+          <span class="tag">Java</span>
+          <span class="tag">C++</span>
+          <span class="tag">C#</span>
+          <span class="tag">Assembly</span>
+          
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Frameworks &amp; Tools</h3>
+        <div class="tag-row">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Git</span>
+          <span class="tag">Figma</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Databases</h3>
+        <div class="tag-row">
+          <span class="tag">MongoDB</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">MySQL</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Other</h3>
+        <div class="tag-row">
+          <span class="tag">REST APIs</span>
+          <span class="tag">Agile</span>
+          <span class="tag">Testing</span>
+          <span class="tag">Deployment</span>
+          <span class="tag">Cooking</span>
+          <span class="tag">Ghost Writing</span>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="section__head">
+      <p class="eyebrow">Selected Work</p>
+      <h2>Projects</h2>
+    </div>
+    <div class="projects__grid">
+
+      <article class="project-card">
+        <div class="project-card__glow" aria-hidden="true"></div>
+        <h3>Project One</h3>
+        <p>One or two sentences describing the problem this project solves and how you built it.</p>
+        <div class="tag-row">
+          <span class="tag tag--sm">React</span>
+          <span class="tag tag--sm">Node.js</span>
+        </div>
+        <div class="project-card__links">
+          <a href="/Projects/project-01.html" class="link-arrow">Click for more details →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__glow" aria-hidden="true"></div>
+        <h3>Project Two</h3>
+        <p>One or two sentences describing the problem this project solves and how you built it.</p>
+        <div class="tag-row">
+          <span class="tag tag--sm">Python</span>
+          <span class="tag tag--sm">PostgreSQL</span>
+        </div>
+        <div class="project-card__links">
+          <a href="/Projects/project-02.html" class="link-arrow">Click for more details →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__glow" aria-hidden="true"></div>
+        <h3>Project Three</h3>
+        <p>One or two sentences describing the problem this project solves and how you built it.</p>
+        <div class="tag-row">
+          <span class="tag tag--sm">JavaScript</span>
+          <span class="tag tag--sm">CSS</span>
+        </div>
+        <div class="project-card__links">
+          <a href="/Projects/project-03.html" class="link-arrow">Click for more details →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__glow" aria-hidden="true"></div>
+        <h3>Project Four</h3>
+        <p>One or two sentences describing the problem this project solves and how you built it.</p>
+        <div class="tag-row">
+          <span class="tag tag--sm">React</span>
+          <span class="tag tag--sm">Node.js</span>
+        </div>
+        <div class="project-card__links">
+          <a href="/Projects/project-04.html" class="link-arrow">Click for more details →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__glow" aria-hidden="true"></div>
+        <h3>Project Five</h3>
+        <p>One or two sentences describing the problem this project solves and how you built it.</p>
+        <div class="tag-row">
+          <span class="tag tag--sm">Python</span>
+          <span class="tag tag--sm">PostgreSQL</span>
+        </div>
+        <div class="project-card__links">
+          <a href="/Projects/project-05.html" class="link-arrow">Click for more details →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__glow" aria-hidden="true"></div>
+        <h3>Project Six</h3>
+        <p>One or two sentences describing the problem this project solves and how you built it.</p>
+        <div class="tag-row">
+          <span class="tag tag--sm">JavaScript</span>
+          <span class="tag tag--sm">CSS</span>
+        </div>
+        <div class="project-card__links">
+          <a href="/Projects/project-06.html" class="link-arrow">Click for more details →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section--contact">
+    <div class="section__head">
+      <p class="eyebrow">Let's Talk</p>
+      <h2>Contact Me</h2>
+    </div>
+
+    <div class="contact__wrap">
+      <form class="contact__form" id="contactForm">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+        </label>
+        <button type="submit" class="btn btn--primary">Send Message</button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+
+      <div class="contact__side">
+        <p>Prefer email or social? I'm reachable here too:</p>
+        <ul class="contact__list">
+          <li><a href="mailto:miguel.a.garcia0313@gmail.com">miguel.a.garcia0313@gmail.com</a></li>
+          <li><a href="https://github.com/miguelagarcia0313-ux" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/miguel-garcia-872340420/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 Miguel Garcia. Built with care.</p>
+</footer>
+
+<script src="Assets/scripts/script.js"></script>
+
+</body>
+</html>

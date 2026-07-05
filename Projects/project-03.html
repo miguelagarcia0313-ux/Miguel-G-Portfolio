@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project One — Miguel Garcia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/Assets/css/styles.css">
+<link rel="stylesheet" href="/Assets/css/project-detail.css">
+</head>
+<body>
+
+<!-- Moving background glow, sits behind everything -->
+<div class="aurora" aria-hidden="true">
+  <span class="aurora__blob aurora__blob--one"></span>
+  <span class="aurora__blob aurora__blob--two"></span>
+  <span class="aurora__blob aurora__blob--three"></span>
+</div>
+
+<!-- Top bar -->
+<header class="navbar">
+  <a href="/index.html#home" class="navbar__brand">Miguel<span>Garcia</span></a>
+
+  <nav class="navbar__nav" id="primaryNav">
+    <a href="/index.html#home" class="nav-link">Home</a>
+    <a href="/index.html#resume" class="nav-link">Resume</a>
+    <a href="/index.html#skills" class="nav-link">Skills</a>
+    <a href="/index.html#projects" class="nav-link active">Projects</a>
+    <a href="/index.html#contact" class="nav-link">Contact Me</a>
+  </nav>
+
+  <button class="navbar__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+  <section class="section">
+
+    <a href="/index.html#projects" class="back-link">&larr; Back to Projects</a>
+
+    <div class="section__head">
+      <p class="eyebrow">Project 03</p>
+      <h2>Project Three Title</h2>
+    </div>
+
+    <div class="project-detail">
+
+      <!-- Details (reads first, sits on the LEFT on desktop) -->
+      <div class="project-detail__info">
+        <p class="eyebrow">Overview</p>
+        <h1>Project Three Title</h1>
+
+        <p class="project-detail__desc">
+          Replace this with what the project is and the problem it solves — one to two sentences,
+          written plainly, like the summaries on your resume timeline.
+        </p>
+        <p class="project-detail__desc">
+          Replace this with how you built it: the approach, any interesting technical decisions,
+          and what you'd call out if someone asked "how does this work?"
+        </p>
+
+        <div class="tag-row">
+          <span class="tag tag--sm">React</span>
+          <span class="tag tag--sm">Node.js</span>
+          <span class="tag tag--sm">PostgreSQL</span>
+        </div>
+
+        <div class="project-detail__links">
+          <a href="https://github.com/miguelagarcia0313-ux/REPO_NAME" target="_blank" rel="noopener" class="btn btn--primary">GitHub Repo</a>
+          <a href="#" target="_blank" rel="noopener" class="btn btn--ghost">Live Deployment</a>
+          <a href="#" target="_blank" rel="noopener" class="btn btn--ghost">YouTube Walkthrough</a>
+        </div>
+      </div>
+
+      <!-- Slideshow (sits on the RIGHT on desktop, on top on mobile) -->
+      <div class="project-detail__slideshow" id="slideshow">
+        <div class="slideshow__track" id="slideshowTrack">
+          <div class="slideshow__slide">
+            <img src="/Assets/images/project-03/slide-1.jpg" alt="Project Three — screen one">
+          </div>
+          <div class="slideshow__slide">
+            <img src="/Assets/images/project-03/slide-2.jpg" alt="Project Three — screen two">
+          </div>
+          <div class="slideshow__slide">
+            <img src="/Assets/images/project-03/slide-3.jpg" alt="Project Three — screen three">
+          </div>
+        </div>
+
+        <button class="slideshow__arrow slideshow__arrow--left" id="slidePrev" aria-label="Previous image">&#8249;</button>
+        <button class="slideshow__arrow slideshow__arrow--right" id="slideNext" aria-label="Next image">&#8250;</button>
+
+        <div class="slideshow__dots" id="slideDots"></div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 Miguel Garcia. Built with care.</p>
+</footer>
+
+<script src="/Assets/scripts/script.js"></script>
+
+</body>
+</html>
